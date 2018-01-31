@@ -5,10 +5,6 @@
 library(fs)
 library(tidyverse)
 
-
-## how jenny might do this in a first exploration
-## purposely leaving a few things to change later!
-
 #' Which libraries does R search for packages?
 .libPaths()
 

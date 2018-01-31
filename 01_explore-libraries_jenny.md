@@ -1,12 +1,23 @@
 01\_explore-libraries\_jenny.R
 ================
 Dario
-Wed Jan 31 14:06:21 2018
+Wed Jan 31 14:39:18 2018
 
 ``` r
-## how jenny might do this in a first exploration
-## purposely leaving a few things to change later!
+library(fs)
+library(tidyverse)
 ```
+
+    ## ── Attaching packages ─────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.2.1 ──
+
+    ## ✔ ggplot2 2.2.1.9000     ✔ purrr   0.2.4     
+    ## ✔ tibble  1.4.1          ✔ dplyr   0.7.4     
+    ## ✔ tidyr   0.7.2          ✔ stringr 1.2.0     
+    ## ✔ readr   1.1.1          ✔ forcats 0.2.0
+
+    ## ── Conflicts ────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+    ## ✖ dplyr::filter() masks stats::filter()
+    ## ✖ dplyr::lag()    masks stats::lag()
 
 Which libraries does R search for packages?
 
@@ -24,28 +35,12 @@ Which libraries does R search for packages?
     ## [1] "/Library/Frameworks/R.framework/Resources/library"
 
 ``` r
-library(fs)
 path_real(.Library)
 ```
 
     ## /Library/Frameworks/R.framework/Versions/3.4/Resources/library
 
 Installed packages
-
-``` r
-library(tidyverse)
-```
-
-    ## ── Attaching packages ─────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.2.1 ──
-
-    ## ✔ ggplot2 2.2.1.9000     ✔ purrr   0.2.4     
-    ## ✔ tibble  1.4.1          ✔ dplyr   0.7.4     
-    ## ✔ tidyr   0.7.2          ✔ stringr 1.2.0     
-    ## ✔ readr   1.1.1          ✔ forcats 0.2.0
-
-    ## ── Conflicts ────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
-    ## ✖ dplyr::filter() masks stats::filter()
-    ## ✖ dplyr::lag()    masks stats::lag()
 
 ``` r
 ipt <- installed.packages() %>%
