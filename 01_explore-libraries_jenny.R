@@ -12,6 +12,8 @@ library(tidyverse)
 .Library
 path_real(.Library)
 
+# oouuuuuuu
+
 #' Installed packages
 ipt <- installed.packages() %>%
   as_tibble()
